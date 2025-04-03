@@ -38,7 +38,7 @@ if uploaded_pdf is not None:
     vectorstore = Chroma.from_documents(
     documents=docs, 
     embedding=embedding,
-    persist_directory="./chromadb"  # Ensures new storage path
+    persist_directory="./chromadb"  
     )
     retriever = vectorstore.as_retriever(
         search_type = "similarity",
