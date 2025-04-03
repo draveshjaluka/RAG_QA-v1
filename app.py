@@ -46,7 +46,7 @@ if uploaded_pdf is not None:
     vectorstore = Chroma.from_documents(
         documents=docs, 
         embedding=embedding,
-        persist_directory=chroma_dir
+        
     )
 
     retriever = vectorstore.as_retriever(
